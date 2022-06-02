@@ -1,0 +1,349 @@
+@charset "UTF-8";
+/* 레이어 팝업창(#modal) 배경 스타일 적용 */
+/* 레이어 팝업창 스타일 적용 */
+/* .logo와 .menu를 묶어줌 */
+/* 로고 영역 스타일 적용 */
+/* .imgslide와 .contents 묶어줌 */
+/* 공지사항(.notice) 콘텐츠 영역 스타일 적용 */
+/* 공지사항(.notice) 2배수(2n) 요소 배경 스타일 적용 */
+/* 공지사항(.notice) 콘텐츠에 마우스를 올릴 때 스타일 적용 */
+/* 갤러리(.gallery) 콘텐츠 영역 스타일 적용 */
+/* 갤러리(.gallery) 콘텐츠 이미지 영역 스타일 적용 */
+/* 갤러리(.gallery) 콘텐츠에 마우스를 올릴 때 스타일 적용 */
+/* .btmenu와 .familysite 묶어줌 */
+* {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  font-family: "맑은 고딕";
+  color: #333333;
+}
+
+body {
+  width: 1000px;
+  background-color: #ffffff;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+#modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  display: none;
+}
+
+#modal.active {
+  display: block;
+}
+
+.modal_up {
+  width: 500px;
+  height: 400px;
+  position: fixed;
+  left: 30%;
+  top: 20%;
+  background-color: #ffffff;
+}
+
+.uptitle {
+  margin-top: 30px;
+  text-align: center;
+  line-height: 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.upbody {
+  padding: 30px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.btn {
+  height: 25px;
+  width: 100px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 3px;
+  background: #fabd43;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+header {
+  height: 100px;
+  width: 1000px;
+}
+
+.top {
+  height: 170px;
+  width: 1000px;
+  background-color: #FFD6EE;
+}
+
+.logo {
+  /* float: left; */
+  height: 300px;
+  width: 180px;
+}
+.logo img {
+  float: left;
+  height: 142px;
+  width: 241px;
+  margin-top: 28px;
+  margin-left: -10px;
+}
+
+
+.menu {
+  /* float: left; */
+  height: 100px;
+  width: 1000px;
+  z-index: 1;
+  /* margin-right: 0; */
+}
+
+.navi {
+  float: right;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+.navi > li {
+  float: left;
+}
+.navi > li > a {
+  height: 40px;
+  width: 200px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+}
+.navi > li > a:hover {
+  background-color: #292d30;
+}
+
+.submenu {
+  width: 200px;
+  position: absolute;
+  display: none;
+  z-index: 1;
+}
+.submenu > li > a {
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #ababab;
+  color: #ffffff;
+}
+.submenu > li > a:hover {
+  background-color: #5e686e;
+}
+
+.bodywrap {
+  height: 500px;
+  width: 1000px;
+}
+
+.imgslide {
+  height: 300px;
+  width: 1000px;
+  position: relative;
+  overflow: hidden;
+}
+.imgslide > a {
+  display: block;
+  position: absolute;
+}
+
+.imgtext {
+  height: 50px;
+  width: 500px;
+  position: absolute;
+  margin: -25px 0 0 -250px;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 50px;
+  background-color: rgba(40, 40, 40, 0.5);
+}
+
+.contents {
+  height: 200px;
+  width: 1000px;
+}
+
+.notice {
+  float: left;
+  height: 180px;
+  width: 500px;
+  margin-top: 10px;
+}
+.notice > div {
+  width: 500px;
+  border-bottom-color: #FFD6EE;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+.notice li {
+  float: left;
+  height: 38px;
+  width: 500px;
+  line-height: 38px;
+  font-size: 14px;
+}
+.notice li span {
+  float: right;
+}
+.notice li:nth-child(2n) {
+  background-color: #FFD6EE;
+}
+.notice li:hover {
+  font-weight: bold;
+}
+
+.tab {
+  float: left;
+  width: 400px;
+}
+.tab h4 {
+  float: left;
+  height: 20px;
+  width: 120px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #FFD6EE;
+}
+
+.gallery {
+  float: right;
+  height: 180px;
+  width: 450px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.gallery > div {
+  width: 450px;
+  border-bottom-color: #FFD6EE;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+.gallery li {
+  float: left;
+  margin-top: 10px;
+  margin-left: 4px;
+}
+.gallery li:hover {
+  opacity: 0.5;
+}
+.gallery img {
+  height: 145px;
+  width: 145px;
+}
+
+.shortcut {
+  float: right;
+  height: 180px;
+  width: 200px;
+  margin-top: 10px;
+}
+.shortcut img {
+  float: right;
+  height: 180px;
+  width: 200px;
+}
+
+.sctext {
+  float: right;
+  height: 30px;
+  width: 100px;
+  position: absolute;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 30px;
+  background-color: rgba(40, 40, 40, 0.5);
+  margin-top: 80px;
+  margin-left: 50px;
+}
+.sctext:hover {
+  opacity: 0.5;
+}
+
+footer {
+  height: 100px;
+  width: 1000px;
+  /* background-color: #48487d; */
+}
+
+.copy {
+  /* float: left; */
+  height: 140px;
+  width: 500px;
+  text-align: center;
+  font-size: 11px;
+  line-height: 100px;
+  color: #000000;
+}
+
+.site {
+  float: right;
+  height: 100px;
+  width: 500px;
+}
+
+.btmenu {
+  float: right;
+  height: 50px;
+  width: 300px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 50px;
+}
+.btmenu li > a {
+  float: left;
+  width: 100px;
+  display: inline;
+  color: #000000;
+}
+.btmenu li > a:hover {
+  font-weight: bold;
+}
+
+.familysite {
+  float: right;
+  height: 50px;
+  width: 300px;
+}
+.familysite select {
+  float: right;
+  height: 30px;
+  width: 280px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=style.css.map */
